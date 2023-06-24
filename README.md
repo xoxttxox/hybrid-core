@@ -6,7 +6,7 @@ A library containing core mechanisms for Hybrid Launcher
 
 * Node.js 18 (minimum)
 
-hybrid-coree will always use the same minimum node version as Hybrid Launcher.
+hybrid-core will always use the same minimum node version as Hybrid Launcher.
 
 ## Auth
 
