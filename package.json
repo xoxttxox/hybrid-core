@@ -1,0 +1,99 @@
+{
+  "name": "hybrid-coree",
+  "version": "1.0.0",
+  "description": "A library containing core mechanisms for Hybrid Launcher",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "tsc": "tsc",
+    "build": "npm run clean && npm run tsc",
+    "lint": "eslint . --ext .js,.ts",
+    "test": "cross-env TS_NODE_PROJECT='./tsconfig.test.json' NODE_ENV=test mocha -r ts-node/register --recursive test/**/**/*.ts",
+    "bl": "npm run build && npm link",
+    "prepack": "npm run build"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./common": "./dist/common.js",
+    "./dl": "./dist/dl.js",
+    "./java": "./dist/java.js",
+    "./microsoft": "./dist/microsoft.js",
+    "./mojang": "./dist/mojang.js"
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/index.d.ts"
+      ],
+      "common": [
+        "./dist/common.d.ts"
+      ],
+      "dl": [
+        "./dist/dl.d.ts"
+      ],
+      "java": [
+        "./dist/java.d.ts"
+      ],
+      "microsoft": [
+        "./dist/microsoft.d.ts"
+      ],
+      "mojang": [
+        "./dist/mojang.d.ts"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xoxttxox/hybrid-core.git"
+  },
+  "keywords": [
+    "hybrid-launcher",
+    "hybrid-core",
+    "minecraft-launcher"
+  ],
+  "author": "pascal0397",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xoxttxox/hybrid-core/issues"
+  },
+  "homepage": "https://github.com/xoxttxox/hybrid-core#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/fs-extra": "^11.0.1",
+    "@types/luxon": "^3.3.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.15.11",
+    "@types/tar-fs": "^2.0.1",
+    "@types/triple-beam": "^1.3.2",
+    "@types/winreg": "^1.2.31",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.38.0",
+    "hybrid-distribution-types": "^1.0.0",
+    "mocha": "^10.2.0",
+    "nock": "^13.3.0",
+    "rimraf": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "fastq": "^1.15.0",
+    "fs-extra": "^11.1.1",
+    "got": "^11.8.6",
+    "luxon": "^3.3.0",
+    "node-disk-info": "^1.3.0",
+    "node-stream-zip": "^1.15.0",
+    "semver": "^7.4.0",
+    "tar-fs": "^2.1.1",
+    "triple-beam": "^1.3.0",
+    "winreg": "^1.2.4",
+    "winston": "^3.8.2"
+  },
+  "files": [
+    "dist"
+  ]
+}
